@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "provider_fictional_tech"
 version = "1.0.0"
 description = "A plugin for the `mockpip`"
-dependencies = []
+dependencies = ["variantlib"]
 
 [project.entry-points."mockpip.plugins"]
 fictional_tech = "provider_fictional_tech.plugin:FictionalTechPlugin"
