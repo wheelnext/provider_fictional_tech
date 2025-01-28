@@ -24,7 +24,7 @@ class FictionalTechPlugin:
         Returns a list of strings in order of priority."""
         return ["1000000000", "100000", "25"]
 
-    def run(self) -> ProviderConfig:
+    def run(self) -> ProviderConfig | None:
         keyconfigs = []
 
         # Top Priority
