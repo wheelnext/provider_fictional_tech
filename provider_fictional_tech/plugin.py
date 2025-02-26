@@ -1,7 +1,7 @@
 from variantlib.config import KeyConfig
 from variantlib.config import ProviderConfig
 
-from provider_fictional_hw import __version__
+from provider_fictional_tech import __version__
 
 
 class FictionalTechPlugin:
