@@ -1,7 +1,8 @@
-from variantlib.config import KeyConfig
-from variantlib.config import ProviderConfig
+from __future__ import annotations
 
 from provider_fictional_tech import __version__
+from variantlib.models.provider import ProviderConfig
+from variantlib.models.provider import VariantFeatureConfig
 
 
 class FictionalTechPlugin:
@@ -29,15 +30,15 @@ class FictionalTechPlugin:
 
         # Top Priority
         if (values := self._get_supported_technologies()) is not None:
-            keyconfigs.append(KeyConfig(key="technology", values=values))
+            keyconfigs.append(VariantFeatureConfig(name="technology", values=values))
 
         # Second Priority
         if (values := self._get_supported_quantum()) is not None:
-            keyconfigs.append(KeyConfig(key="quantum", values=values))
+            keyconfigs.append(VariantFeatureConfig(name="quantum", values=values))
 
         # Third Priority
         if (values := self._get_supported_risk_exposure()) is not None:
-            keyconfigs.append(KeyConfig(key="risk_exposure", values=values))
+            keyconfigs.append(VariantFeatureConfig(name="risk_exposure", values=values))
 
         if keyconfigs:
             return ProviderConfig(
