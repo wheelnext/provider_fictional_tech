@@ -6,7 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "provider_fictional_tech"
 version = "1.0.0"
 description = "A plugin for the `mockpip`"
-dependencies = ["variantlib"]
+dependencies = [
+    "variantlib @ https://github.com/wheelnext/variantlib/archive/main.tar.gz"
+]
 
 [project.entry-points."variantlib.plugins"]
 fictional_tech = "provider_fictional_tech.plugin:FictionalTechPlugin"
