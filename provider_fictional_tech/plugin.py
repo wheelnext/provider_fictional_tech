@@ -41,7 +41,7 @@ class FictionalTechPlugin:
 
     def get_all_configs(self) -> list[VariantFeatureConfig]:
         return [
-            VariantFeatureConfig(name="technology", values=["FOAM", "SUPERPOSITION"]),
-            VariantFeatureConfig(name="quantum", values=["auto_chef", "improb_drive"]),
+            VariantFeatureConfig(name="technology", values=["auto_chef", "improb_drive"]),
+            VariantFeatureConfig(name="quantum", values=["FOAM", "SUPERPOSITION"]),
             VariantFeatureConfig(name="risk_exposure", values=["25", "1000000000"]),
         ]
