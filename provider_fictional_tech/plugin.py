@@ -1,6 +1,14 @@
 from __future__ import annotations
 
-from variantlib.models.provider import VariantFeatureConfig
+from dataclasses import dataclass
+
+
+@dataclass(frozen=True)
+class VariantFeatureConfig:
+    name: str
+
+    # Acceptable values in priority order
+    values: list[str]
 
 
 class FictionalTechPlugin:
@@ -41,7 +49,9 @@ class FictionalTechPlugin:
 
     def get_all_configs(self) -> list[VariantFeatureConfig]:
         return [
-            VariantFeatureConfig(name="technology", values=["auto_chef", "improb_drive"]),
+            VariantFeatureConfig(
+                name="technology", values=["auto_chef", "improb_drive"]
+            ),
             VariantFeatureConfig(name="quantum", values=["FOAM", "SUPERPOSITION"]),
             VariantFeatureConfig(name="risk_exposure", values=["25", "1000000000"]),
         ]
