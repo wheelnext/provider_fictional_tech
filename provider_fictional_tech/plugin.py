@@ -22,7 +22,7 @@ class FictionalTechPlugin:
     def _get_supported_quantum(self) -> list[str]:
         """Lookup the system to decide what `quantum` are supported on this system.
         Returns a list of strings in order of priority."""
-        return ["FOAM", "SUPERPOSITION"]
+        return ["foam", "superposition"]
 
     def _get_supported_risk_exposure(self) -> list[str]:
         """Lookup the system to decide what `risk_exposure` are supported on this
@@ -52,6 +52,6 @@ class FictionalTechPlugin:
             VariantFeatureConfig(
                 name="technology", values=["auto_chef", "improb_drive"]
             ),
-            VariantFeatureConfig(name="quantum", values=["FOAM", "SUPERPOSITION"]),
+            VariantFeatureConfig(name="quantum", values=["foam", "superposition"]),
             VariantFeatureConfig(name="risk_exposure", values=["25", "1000000000"]),
         ]
